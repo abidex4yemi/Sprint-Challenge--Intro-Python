@@ -1,33 +1,4 @@
 # Write classes for the following class hierarchy:
-
-
-class Vehicle:
-    def __init__(self, color, manufacturer, number_of_engine):
-        self.color = color
-        self.manufacturer = manufacturer
-        self.number_of_engine = number_of_engine
-
-
-class FlightVehicle(Vehicle):
-    def __init__(self, color, manufacturer, number_of_engine, wings):
-        super().__init__(color, manufacturer, number_of_engine)
-        self.wings = wings
-
-
-class Starship(FlightVehicle):
-    def __init__(self, color, manufacturer, number_of_engine, wings):
-        super().__init__(color, manufacturer, number_of_engine, wings)
-
-
-class GroundVehicle(Vehicle):
-    def __init__(self, color, manufacturer, number_of_engine):
-        super().__init__(color, manufacturer, number_of_engine)
-
-
-class Car(GroundVehicle):
-    def __init__(self, color, manufacturer, number_of_engine):
-        super().__init__(color, manufacturer, number_of_engine)
-
 #  [Vehicle]->[FlightVehicle]->[Starship]
 #      |                |
 #      v                v
@@ -45,3 +16,40 @@ class Car(GroundVehicle):
 #     pass
 #
 # Put a comment noting which class is the base class
+
+
+class Vehicle:
+    def __init__(self):
+        pass
+
+
+class FlightVehicle(Vehicle):
+    def __init__(self):
+        super().__init__()
+        pass
+
+
+class Airplane(FlightVehicle):
+    def __init__(self):
+        super().__init__()
+        pass
+
+
+class Starship(FlightVehicle):
+    def __init__(self):
+        super().__init__()
+
+
+class GroundVehicle(Vehicle):
+    def __init__(self):
+        super().__init__()
+
+
+class Car(GroundVehicle):
+    def __init__(self):
+        super().__init__()
+
+
+class Motorcycle(GroundVehicle):
+    def __init__(self):
+        super().__init__()
