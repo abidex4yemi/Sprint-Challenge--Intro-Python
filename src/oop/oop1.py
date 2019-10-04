@@ -6,6 +6,13 @@ class Vehicle:
         self.color = color
         self.manufacturer = manufacturer
         self.number_of_engine = number_of_engine
+
+
+class FlightVehicle(Vehicle):
+    def __init__(self, color, manufacturer, number_of_engine, wings):
+        super().__init__(color, manufacturer, number_of_engine)
+        self.wings = wings
+
 #  [Vehicle]->[FlightVehicle]->[Starship]
 #      |                |
 #      v                v
