@@ -13,6 +13,10 @@ class FlightVehicle(Vehicle):
         super().__init__(color, manufacturer, number_of_engine)
         self.wings = wings
 
+
+class Starship(FlightVehicle):
+    def __init__(self, color, manufacturer, number_of_engine, wings)
+    super().__init__(color, manufacturer, number_of_engine, wings)
 #  [Vehicle]->[FlightVehicle]->[Starship]
 #      |                |
 #      v                v
