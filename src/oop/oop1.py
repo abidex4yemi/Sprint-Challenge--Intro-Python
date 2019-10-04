@@ -23,6 +23,11 @@ class GroundVehicle(Vehicle):
     def __init__(self, color, manufacturer, number_of_engine):
         super().__init__(color, manufacturer, number_of_engine)
 
+
+class Car(GroundVehicle):
+    def __init__(self, color, manufacturer, number_of_engine):
+        super().__init__(color, manufacturer, number_of_engine)
+
 #  [Vehicle]->[FlightVehicle]->[Starship]
 #      |                |
 #      v                v
