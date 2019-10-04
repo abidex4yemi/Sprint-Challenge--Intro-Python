@@ -44,8 +44,10 @@ def cityreader(cities=[]):
 
         with open(f"{script_directory}/cities.csv") as csv_file:
             reader = csv.DictReader(csv_file, fieldnames=fieldnames)
+            next(reader, None)
             for row in reader:
-                cities.append(City(row["city"], row["lat"], row["lng"]))
+                cities.append(
+                    City(row["city"], float(row["lat"]), float(row["lng"])))
 
         return cities
     except FileNotFoundError:
@@ -55,8 +57,8 @@ def cityreader(cities=[]):
 cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
-for city in cities:
-    print(f"City name: {city.name} latitude: {city.lat} longitude: {city.lon}")
+# for city in cities:
+#     print(f"City name: {city.name} latitude: {city.lat} longitude: {city.lon}")
 
 # STRETCH GOAL!
 #
@@ -92,7 +94,7 @@ for city in cities:
 # TODO Get latitude and longitude values from the user
 
 
-def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
+def cityreader_stretch(lat1, lon2, cities=[]):
     # within will hold the cities that fall within the specified region
     within = []
 
