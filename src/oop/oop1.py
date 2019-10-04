@@ -1,5 +1,11 @@
 # Write classes for the following class hierarchy:
-#
+
+
+class Vehicle:
+    def __init__(self, color, manufacturer, number_of_engine):
+        self.color = color
+        self.manufacturer = manufacturer
+        self.number_of_engine = number_of_engine
 #  [Vehicle]->[FlightVehicle]->[Starship]
 #      |                |
 #      v                v
